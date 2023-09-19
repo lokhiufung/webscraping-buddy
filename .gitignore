@@ -160,4 +160,5 @@ cython_debug/
 #.idea/
 
 logs/
-result_*/
+crawled_data/
+mytest*.py

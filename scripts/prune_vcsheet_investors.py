@@ -1,6 +1,6 @@
-import pandas as pd
+import sys
 
-from crawler.vcsheet.vcsheet_contact_crawler import VcsheetCrawler
+import pandas as pd
 
 
 def prune_result(df):
@@ -18,11 +18,13 @@ def prune_result(df):
     return df
 
 
-if __name__ == '__main__':
-    crawler = VcsheetCrawler(
-        crawler_directory='./result_vcsheet',
-    )
-
-    df = crawler.run()
+def main():
+    file_path = sys.argv[0]
+    df = pd.read_csv(file_path)
     df = prune_result(df)
-    df.to_csv('./result_vcsheet/data/pruned_investor_contacts.csv', index=False)
+    df.to_csv(file_path.replace('.csv', '') + '_pruned.csv', index=False)
+
+
+if __name__ == '__main__':
+    main()
+    
