@@ -8,7 +8,7 @@ poetry install
 ```
 
 ## Use cases
-### Lead Generation in Fund-rasing
+### Lead Generation in Fund-raising
 The crawlers will gather initaial data (investor'name, linkedin, investor's website) from investor listing websites. Then, the scraper will extract directly the email directly from many investor / venture capital official websites.
 
 An contact record may look like the following:
