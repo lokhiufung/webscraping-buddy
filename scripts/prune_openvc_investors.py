@@ -1,6 +1,5 @@
+import sys
 import pandas as pd
-
-from crawler.openvc.openvc_contact_crawler import OpenvcContactCrawler
 
 
 def prune_result(df):
@@ -18,11 +17,13 @@ def prune_result(df):
     return df
 
 
-if __name__ == '__main__':
-    crawler = OpenvcContactCrawler(
-        crawler_directory='./result_openvc',
-    )
-
-    df = crawler.run()
+def main():
+    file_path = sys.argv[0]
+    df = pd.read_csv(file_path)
     df = prune_result(df)
-    df.to_csv('./result_openvc/data/pruned_investor_contacts.csv', index=False)
+    df.to_csv(file_path.replace('.csv', '') + '_pruned.csv', index=False)
+
+
+if __name__ == '__main__':
+    main()
+    
