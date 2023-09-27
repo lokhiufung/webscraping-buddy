@@ -8,7 +8,7 @@ poetry install
 ```
 
 ## Use cases
-### Lead Generation in Fund-raising
+### Use case 1: Lead Generation in Fund-raising
 The crawlers will gather initaial data (investor'name, linkedin, investor's website) from investor listing websites. Then, the scraper will extract directly the email directly from many investor / venture capital official websites.
 
 An contact record may look like the following:
@@ -43,7 +43,7 @@ scrapy crawl openvc_investors
 python run_interactive_crawler.py --project investors --spider vcsheet_investors --storage vcsheet_investors.jsonl
 ```
 
-### Influencer Discovery
+### Use case 2: Influencer Discovery
 Influencer marketing is one of the popular options for efficient marketing today. You need a list of potential influencer with high ROI before you start a influencer marketing campaign. The potential high-quailty influencers can be found in the trend posts in social media, like Instagram, Xiao Hung Shu (i.e a popular instagram-like social media app in China). There are crawlers to gather the accounts with high number of followers in the trendin posts in the social media.
 
 For example, an account record may look like the following:
@@ -65,7 +65,7 @@ For example, an account record may look like the following:
 python run_interactive_crawler.py --project xhs --spider influencers --storage xhs_influencers.jsonl
 ```
 
-### Extracting images from public accounts
+### Use case 3: Extracting images from public accounts
 Instagram is a great place to get a large amount of high quailty images for research (e.g cats). This is useful when you want to study image generation / recognition models
 
 ```bash
