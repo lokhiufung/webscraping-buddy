@@ -15,7 +15,8 @@ class InteractiveSpider:
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     ]
 
-    def __init__(self, headless=True, options=None, user_agent=None, randomize_user_agent=False):
+    def __init__(self, headless=True, options=None, user_agent=None, randomize_user_agent=False, config=None):
+        self.config = config if config is not None else {}
         # headless mode
         self.headless = headless
         # add more options to be more human

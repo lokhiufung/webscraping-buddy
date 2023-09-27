@@ -1,0 +1,9 @@
+{
+    "public_accounts": [
+        "<A public account id>"
+    ],
+    "credentials": {
+        "username": "<your username>",
+        "password": "<your password>"
+    }
+}

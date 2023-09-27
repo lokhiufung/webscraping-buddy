@@ -162,3 +162,4 @@ cython_debug/
 logs/
 crawled_data/
 mytest*.py
+*spider_config.json

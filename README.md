@@ -65,6 +65,34 @@ For example, an account record may look like the following:
 python run_interactive_crawler.py --project xhs --spider influencers --storage xhs_influencers.jsonl
 ```
 
+### Extracting images from public accounts
+Instagram is a great place to get a large amount of high quailty images for research (e.g cats). This is useful when you want to study image generation / recognition models
+
+```bash
+python run_interactive_crawler.py --project ig --spider public_images --storage public_images.jsonl --config_file public_images_spider_config.json 
+```
+
+```json
+{
+    "image_url": "https://instagram.fyto1-1.fna...",
+    "account": "<account name>",
+    "_tsCrawled": 1695827875
+}
+```
+
+## Pruning the crawled data
+You have to prune the crawled data. We are mining emails over 1000 of websites. There is no guarantee that you can extract the emails from the company webistes. You can use the following scripts to prune your results
+
+### VC Sheet
+```bash
+python scripts/prune_vcsheet_investors.py ./crawled_data/vcsheet/investors.jsonl
+```
+
+### OpenVC
+```bash
+python scripts/prune_openvc_investors.py ./crawled_data/openvc/investors.jsonl
+```
+
 ## scrapy_crawler
 This folder contains the crawlers built with Scrapy. Scrapy is an excellent tool for building crawlers. It can provide stability, concurrent, bug-free and exceptional error handling for web scraping to users.
 

@@ -1175,6 +1175,16 @@ python-dotenv = "*"
 requests = "*"
 
 [[package]]
+name = "wget"
+version = "3.2"
+description = "pure python download utility"
+optional = false
+python-versions = "*"
+files = [
+    {file = "wget-3.2.zip", hash = "sha256:35e630eca2aa50ce998b9b1a127bb26b30dfee573702782aa982f875e3f16061"},
+]
+
+[[package]]
 name = "wsproto"
 version = "1.2.0"
 description = "WebSockets state-machine based protocol implementation"
@@ -1238,4 +1248,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "930e16cd0e7811a73707f2f154734213f83cc91f3b291880f45e8662c2ba8ba7"
+content-hash = "95beae3564f6939a812eb18ef6ec3ce0473c54854bcdb4ee96e3bc0bae12317a"
