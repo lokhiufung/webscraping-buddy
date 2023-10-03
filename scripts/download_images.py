@@ -35,7 +35,7 @@ def main():
         image_url = item['image_url']
         # create a unique id for each image url
         item_hash = hashlib.sha256(item['image_url'].encode()).hexdigest()
-        file_path = os.path.join(storage, f'yuuuuko_{item_hash}.png')
+        file_path = os.path.join(storage, f'{item_hash}.png')
         wget.download(image_url, file_path)
 
 

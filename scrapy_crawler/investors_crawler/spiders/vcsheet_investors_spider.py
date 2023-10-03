@@ -24,7 +24,7 @@ class VcsheetInvestorsSpider(scrapy.Spider):
                 ],
                 'playwright_include_page': True
             },
-            callback=self.parse
+            callback=self.parse,
             errback=self.errback,
         )
 
